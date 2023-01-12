@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import "../../app.css";
   const me = new URL("../../../static/me.png", import.meta.url).href;
   const cyber = new URL("../../../static/cyberpunk_2077.jpeg", import.meta.url)

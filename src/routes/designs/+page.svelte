@@ -1,58 +1,45 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-	import '../../app.css';
-	let shots: any = [];
+  import { onMount } from "svelte";
+  import "../../app.css";
+  import GridImages from "../../lib/components/GridImages.svelte";
+  let shots: any = [];
 
-	onMount(async () => {
-		const authToken = '61c6d2da9b628853b29e1542594ae6b79e9048e634765082bda28c54a8d30c8a';
-		const response = await fetch(
-			`https://api.dribbble.com/v2/user/shots?access_token=${authToken}`,
-			{}
-		);
-		shots = await response.json();
-		shots = parseShots(shots);
-	});
+  onMount(async () => {
+    const authToken =
+      "61c6d2da9b628853b29e1542594ae6b79e9048e634765082bda28c54a8d30c8a";
+    const response = await fetch(
+      `https://api.dribbble.com/v2/user/shots?access_token=${authToken}`,
+      {}
+    );
+    shots = await response.json();
+    shots = parseShots(shots);
+  });
 
-	const parseShots = (shots: any) => {
-		return shots.map((shot: any) => {
-			return {
-				hidpi: shot.images.hidpi,
-				url: shot.html_url
-			};
-		});
-	};
+  const parseShots = (shots: any) => {
+    return shots.map((shot: any) => {
+      return {
+        src: shot.images.hidpi,
+        url: shot.html_url,
+      };
+    });
+  };
 </script>
 
 <div class="w-full p-10">
-	<p class="bold text-3xl font-bold">Dribbble projects</p>
-	<div class="mt-20">
-		<div class="flex items-center justify-center w-full">
-			<div class="grid">
-				{#each shots as shot}
-					<a href={shot.url} target="_blank" rel="noreferrer">
-						<img class="grid-item" src={shot.hidpi} alt="dribbble" />
-					</a>
-				{/each}
-			</div>
-		</div>
-	</div>
+  <p class="bold text-3xl text-blackLight font-Fraunces font-bold">
+    Dribbble projects
+  </p>
+  <p class="text-1xl mt-10 font-Fraunces">
+    I am passionate about creating user interface (UI) designs, even though I am
+    still a beginner. Despite not having a lot of experience or spending a long
+    time without working on any new projects, I find that designing UI is an
+    enjoyable and satisfying hobby. I love the process of taking an idea and
+    bringing it to life on a screen, experimenting with different layouts,
+    colors and typography.
+  </p>
+  <div class="mt-20">
+    <div class="flex items-center justify-center w-full">
+      <GridImages photos={shots} gridNumber={3} />
+    </div>
+  </div>
 </div>
-
-<style>
-	.grid {
-		display: grid;
-		grid-template-columns: repeat(3, minmax(250px, 1fr));
-		grid-row-gap: 0px;
-		grid-auto-flow: dense;
-		grid-gap: 20px;
-	}
-
-	.grid-item {
-		border-radius: 10px;
-		object-fit: contain;
-		transition: 300ms all;
-	}
-	.grid-item:hover {
-		transform: scale(1.05);
-	}
-</style>

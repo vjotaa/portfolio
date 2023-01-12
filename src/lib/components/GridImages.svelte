@@ -4,10 +4,20 @@
 </script>
 
 <div
-  class="grid lg:grid-cols-{gridNumber} sm:grid-cols-1 sm:justify-items-center gap-10"
+  class="grid lg:grid-cols-{gridNumber} md:grid-cols-2 max-sm:grid-cols-1 gap-10"
 >
   {#each photos as photo}
-    <img class="rounded card" src={photo.src} alt="img" />
+    {#if !photos.url}
+      <a
+        href={photo.url}
+        target={!photo.noRedirect ? "_blank" : "_self"}
+        rel="noreferrer"
+      >
+        <img class="rounded card" src={photo.src} alt="img" />
+      </a>
+    {:else}
+      <img class="rounded card" src={photo.src} alt="img" />
+    {/if}
   {/each}
 </div>
 

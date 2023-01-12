@@ -1,37 +1,61 @@
 <script lang="ts">
   import "../app.css";
   import GridImages from "../lib/components/GridImages.svelte";
+  import ProjectList from "../lib/components/ProjectList.svelte";
   const imgUrl = new URL("../../static/hi.png", import.meta.url).href;
-  let photos: any = [];
-  const getImages = () => {
-    for (let i = 0; i < 10; i++) {
-      const width = 550;
-      const heightRandom = Math.floor(Math.random() * 100) + 550;
-      const height = heightRandom > 440 ? heightRandom : 550;
-      photos.push({
-        src: `https://picsum.photos/${width}/${height}`,
-      });
-    }
-    return photos;
-  };
+  const pixel1 = new URL("../../static/bear.gif", import.meta.url).href;
+  const pixel2 = new URL("../../static/room.gif", import.meta.url).href;
+  const draw3 = new URL("../../static/3.jpg", import.meta.url).href;
+  let photos: any = [
+    {
+      src: pixel1,
+      url: "/illustrations",
+    },
+    {
+      src: draw3,
+      url: "/illustrations",
+    },
+    {
+      src: pixel2,
+      url: "/illustrations",
+    },
+  ];
 </script>
 
 <svelte:head>
   <title>Victor Manrique</title>
 </svelte:head>
 <div class="w-full p-10">
-  <p class="bold text-4xl font-bold flex text-blackLight">
-    Hi there <span>
-      <img src={imgUrl} class="h-28 ml-1 img-animati" alt="" /></span
-    >, my name is Victor.
+  <p
+    class="max-sm:text-2-1xl bold md:text-3xl lg:text-4xl font-bold flex text-blackLight"
+  >
+    <span>
+      <img
+        src={imgUrl}
+        class="sm:hidden max-sm:text-2xl max-sm:hidden md:hidden lg:h-28 lg:block ml-1 img-animati"
+        alt=""
+      /></span
+    >Hi there, my name is Victor.
   </p>
-  <p class="bold text-3xl font-bold text-blackLight">
+  <p
+    class="bold   max-sm:text-2-1xl  md:text-3xl lg:text-4xl font-bold text-blackLight"
+  >
     A frontend developer who loves building things.
   </p>
   <div class="mt-20">
-    <p class="text-2xl mb-10">My favorites</p>
-    <div class="flex items-center justify-center sm:w-full lg:w-full ">
-      <GridImages photos={getImages()} gridNumber={2} />
+    <div class="flex items-center justify-center flex-col sm:w-full lg:w-full ">
+      <ProjectList />
+
+      <p
+        class="bold text-3xl  max-sm:text-2-1xl max-sm:text-center  text-blackLight mt-10 font-Fraunces font-bold"
+      >
+        I also make some cool illustrations, check it out
+      </p>
+      <div class="mt-20">
+        <div class="flex items-center justify-center w-full">
+          <GridImages {photos} gridNumber={3} />
+        </div>
+      </div>
     </div>
   </div>
 </div>

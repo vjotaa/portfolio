@@ -26,7 +26,6 @@
  * ```
  */
 declare module '$env/static/private' {
-	export const npm_config_save_dev: string;
 	export const TERM_PROGRAM: string;
 	export const NODE: string;
 	export const INIT_CWD: string;
@@ -40,7 +39,6 @@ declare module '$env/static/private' {
 	export const TERM_PROGRAM_VERSION: string;
 	export const ANDROID_SDK_ROOT: string;
 	export const FPATH: string;
-	export const npm_package_optional: string;
 	export const COLOR: string;
 	export const TERM_SESSION_ID: string;
 	export const npm_config_noproxy: string;
@@ -52,14 +50,12 @@ declare module '$env/static/private' {
 	export const ZPLUG_ERROR_LOG: string;
 	export const COMMAND_MODE: string;
 	export const npm_config_globalconfig: string;
-	export const npm_package_peer: string;
 	export const ZPLUG_PROTOCOL: string;
 	export const SSH_AUTH_SOCK: string;
 	export const __CF_USER_TEXT_ENCODING: string;
 	export const npm_execpath: string;
 	export const VIRTUAL_ENV_DISABLE_PROMPT: string;
 	export const PAGER: string;
-	export const npm_package_integrity: string;
 	export const _ZPLUG_PREZTO: string;
 	export const _ZPLUG_VERSION: string;
 	export const PERIOD: string;
@@ -81,13 +77,10 @@ declare module '$env/static/private' {
 	export const XPC_FLAGS: string;
 	export const _ZPLUG_OHMYZSH: string;
 	export const ZPLUG_BIN: string;
-	export const npm_package_engines_node: string;
 	export const _ZPLUG_URL: string;
 	export const npm_config_node_gyp: string;
-	export const npm_package_dev: string;
 	export const npm_package_version: string;
 	export const XPC_SERVICE_NAME: string;
-	export const npm_package_resolved: string;
 	export const ZPLUG_CACHE_DIR: string;
 	export const SHLVL: string;
 	export const HOME: string;
@@ -97,7 +90,6 @@ declare module '$env/static/private' {
 	export const LC_TERMINAL_VERSION: string;
 	export const ZPLUG_REPOS: string;
 	export const ZPLUG_THREADS: string;
-	export const npm_package_dev_optional: string;
 	export const ITERM_SESSION_ID: string;
 	export const npm_config_cache: string;
 	export const LESS: string;
@@ -114,6 +106,7 @@ declare module '$env/static/private' {
 	export const npm_node_execpath: string;
 	export const npm_config_prefix: string;
 	export const COLORTERM: string;
+	export const NODE_ENV: string;
 }
 
 /**
@@ -143,7 +136,6 @@ declare module '$env/static/public' {
  */
 declare module '$env/dynamic/private' {
 	export const env: {
-		npm_config_save_dev: string;
 		TERM_PROGRAM: string;
 		NODE: string;
 		INIT_CWD: string;
@@ -157,7 +149,6 @@ declare module '$env/dynamic/private' {
 		TERM_PROGRAM_VERSION: string;
 		ANDROID_SDK_ROOT: string;
 		FPATH: string;
-		npm_package_optional: string;
 		COLOR: string;
 		TERM_SESSION_ID: string;
 		npm_config_noproxy: string;
@@ -169,14 +160,12 @@ declare module '$env/dynamic/private' {
 		ZPLUG_ERROR_LOG: string;
 		COMMAND_MODE: string;
 		npm_config_globalconfig: string;
-		npm_package_peer: string;
 		ZPLUG_PROTOCOL: string;
 		SSH_AUTH_SOCK: string;
 		__CF_USER_TEXT_ENCODING: string;
 		npm_execpath: string;
 		VIRTUAL_ENV_DISABLE_PROMPT: string;
 		PAGER: string;
-		npm_package_integrity: string;
 		_ZPLUG_PREZTO: string;
 		_ZPLUG_VERSION: string;
 		PERIOD: string;
@@ -198,13 +187,10 @@ declare module '$env/dynamic/private' {
 		XPC_FLAGS: string;
 		_ZPLUG_OHMYZSH: string;
 		ZPLUG_BIN: string;
-		npm_package_engines_node: string;
 		_ZPLUG_URL: string;
 		npm_config_node_gyp: string;
-		npm_package_dev: string;
 		npm_package_version: string;
 		XPC_SERVICE_NAME: string;
-		npm_package_resolved: string;
 		ZPLUG_CACHE_DIR: string;
 		SHLVL: string;
 		HOME: string;
@@ -214,7 +200,6 @@ declare module '$env/dynamic/private' {
 		LC_TERMINAL_VERSION: string;
 		ZPLUG_REPOS: string;
 		ZPLUG_THREADS: string;
-		npm_package_dev_optional: string;
 		ITERM_SESSION_ID: string;
 		npm_config_cache: string;
 		LESS: string;
@@ -231,6 +216,7 @@ declare module '$env/dynamic/private' {
 		npm_node_execpath: string;
 		npm_config_prefix: string;
 		COLORTERM: string;
+		NODE_ENV: string;
 		[key: `PUBLIC_${string}`]: undefined;
 		[key: string]: string | undefined;
 	}

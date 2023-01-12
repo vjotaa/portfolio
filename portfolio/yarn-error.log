@@ -1,0 +1,72 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/bin/yarn add -D @types/typewriter-effect
+
+PATH: 
+  /usr/local/Cellar/zplug/2.4.2/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Users/ivictor/flutter/bin
+
+Yarn version: 
+  1.22.18
+
+Node version: 
+  16.14.2
+
+Platform: 
+  darwin arm64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/@types%2ftypewriter-effect: Not found
+      at Request.params.callback [as _callback] (/usr/local/lib/node_modules/yarn/lib/cli.js:66138:18)
+      at Request.self.callback (/usr/local/lib/node_modules/yarn/lib/cli.js:140883:22)
+      at Request.emit (node:events:526:28)
+      at Request.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:141855:10)
+      at Request.emit (node:events:526:28)
+      at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:141777:12)
+      at Object.onceWrapper (node:events:645:28)
+      at IncomingMessage.emit (node:events:538:35)
+      at endReadableNT (node:internal/streams/readable:1345:12)
+      at processTicksAndRejections (node:internal/process/task_queues:83:21)
+
+npm manifest: 
+  {
+  	"name": "my-app",
+  	"version": "0.0.1",
+  	"private": true,
+  	"scripts": {
+  		"dev": "vite dev",
+  		"build": "vite build",
+  		"preview": "vite preview",
+  		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+  		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+  		"lint": "prettier --plugin-search-dir . --check . && eslint .",
+  		"format": "prettier --plugin-search-dir . --write ."
+  	},
+  	"devDependencies": {
+  		"@sveltejs/adapter-auto": "^1.0.0",
+  		"@sveltejs/kit": "^1.0.0",
+  		"@typescript-eslint/eslint-plugin": "^5.45.0",
+  		"@typescript-eslint/parser": "^5.45.0",
+  		"autoprefixer": "^10.4.13",
+  		"eslint": "^8.28.0",
+  		"eslint-config-prettier": "^8.5.0",
+  		"eslint-plugin-svelte3": "^4.0.0",
+  		"postcss": "^8.4.21",
+  		"prettier": "^2.8.0",
+  		"prettier-plugin-svelte": "^2.8.1",
+  		"svelte": "^3.54.0",
+  		"svelte-check": "^2.9.2",
+  		"tailwindcss": "^3.2.4",
+  		"tslib": "^2.4.1",
+  		"typescript": "^4.9.3",
+  		"vite": "^4.0.0"
+  	},
+  	"type": "module",
+  	"dependencies": {
+  		"typewriter-effect": "^2.19.0"
+  	}
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

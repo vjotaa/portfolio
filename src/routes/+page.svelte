@@ -53,7 +53,7 @@
       </p>
       <div class="mt-20">
         <div class="flex items-center justify-center w-full">
-          <GridImages {photos} gridNumber={3} />
+          <GridImages {photos} gridNumber={4} />
         </div>
       </div>
     </div>

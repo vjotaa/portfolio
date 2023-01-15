@@ -3,7 +3,9 @@
   export let photos: any;
 </script>
 
-<div class="grid lg:grid-cols-3 max-sm:grid-cols-1 gap-10">
+<div
+  class="grid lg:grid-cols-3 xl:grid-cols-{gridNumber} max-sm:grid-cols-1 gap-10"
+>
   {#each photos as photo}
     {#if !photos.url}
       <a

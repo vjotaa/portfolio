@@ -90,7 +90,7 @@
   </p>
   <div class="mt-20">
     <div class="flex items-center justify-center w-full">
-      <GridImages photos={projects} gridNumber={3} />
+      <GridImages photos={projects} gridNumber={4} />
     </div>
   </div>
 </div>

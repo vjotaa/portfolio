@@ -69,7 +69,7 @@
             <a
               href="/illustrations"
               class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-              >illustrations</a
+              >Illustrations</a
             >
 
             <a
@@ -97,7 +97,7 @@
           on:click={() => (open = !open)}
           href="/illustrations"
           class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-          >illustrations</a
+          >Illustrations</a
         >
 
         <a

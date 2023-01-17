@@ -9,14 +9,17 @@
   let photos: any = [
     {
       src: pixel1,
+      noRedirect: true,
       url: "/illustrations",
     },
     {
       src: draw3,
+      noRedirect: true,
       url: "/illustrations",
     },
     {
       src: pixel2,
+      noRedirect: true,
       url: "/illustrations",
     },
   ];
